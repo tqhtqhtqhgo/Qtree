@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/caaffrey/CLionProjects/Qtree/main.c
+stdio.h
+/home/caaffrey/CLionProjects/Qtree/stdio.h
+stdlib.h
+/home/caaffrey/CLionProjects/Qtree/stdlib.h
+math.h
+/home/caaffrey/CLionProjects/Qtree/math.h
+
