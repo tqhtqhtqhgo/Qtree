@@ -1,1 +1,1 @@
-/usr/bin/clang  -lm -g   CMakeFiles/Qtree.dir/main.c.o  -o Qtree 
+/usr/bin/cc  -g -lm  -g   CMakeFiles/Qtree.dir/tmp.c.o CMakeFiles/Qtree.dir/main.c.o  -o Qtree 

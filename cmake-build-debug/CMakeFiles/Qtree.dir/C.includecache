@@ -7,10 +7,20 @@
 #IncludeRegexTransform: 
 
 /home/caaffrey/CLionProjects/Qtree/main.c
+qtree.h
+/home/caaffrey/CLionProjects/Qtree/qtree.h
+
+/home/caaffrey/CLionProjects/Qtree/qtree.h
+bits/types/FILE.h
+-
+
+/home/caaffrey/CLionProjects/Qtree/tmp.c
 stdio.h
 /home/caaffrey/CLionProjects/Qtree/stdio.h
 stdlib.h
 /home/caaffrey/CLionProjects/Qtree/stdlib.h
 math.h
 /home/caaffrey/CLionProjects/Qtree/math.h
+qtree.h
+/home/caaffrey/CLionProjects/Qtree/qtree.h
 

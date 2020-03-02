@@ -150,6 +150,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/Qtree.dir/build.make CMakeFiles/Qtree.dir/main.c.s
 .PHONY : main.c.s
 
+tmp.o: tmp.c.o
+
+.PHONY : tmp.o
+
+# target to build an object file
+tmp.c.o:
+	$(MAKE) -f CMakeFiles/Qtree.dir/build.make CMakeFiles/Qtree.dir/tmp.c.o
+.PHONY : tmp.c.o
+
+tmp.i: tmp.c.i
+
+.PHONY : tmp.i
+
+# target to preprocess a source file
+tmp.c.i:
+	$(MAKE) -f CMakeFiles/Qtree.dir/build.make CMakeFiles/Qtree.dir/tmp.c.i
+.PHONY : tmp.c.i
+
+tmp.s: tmp.c.s
+
+.PHONY : tmp.s
+
+# target to generate assembly for a file
+tmp.c.s:
+	$(MAKE) -f CMakeFiles/Qtree.dir/build.make CMakeFiles/Qtree.dir/tmp.c.s
+.PHONY : tmp.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... tmp.o"
+	@echo "... tmp.i"
+	@echo "... tmp.s"
 .PHONY : help
 
 

@@ -4,7 +4,7 @@
 	<Project>
 		<Option title="Qtree"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="clang"/>
+		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
@@ -32,10 +32,11 @@
 				<Option working_dir="/home/caaffrey/CLionProjects/Qtree/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="clang"/>
+				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.1/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/clang/9.0.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.1/include-fixed"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -50,10 +51,11 @@
 				<Option working_dir="/home/caaffrey/CLionProjects/Qtree/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="clang"/>
+				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.1/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/clang/9.0.1/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.1/include-fixed"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -75,6 +77,12 @@
 			</Target>
 		</Build>
 		<Unit filename="/home/caaffrey/CLionProjects/Qtree/main.c">
+			<Option target="Qtree"/>
+		</Unit>
+		<Unit filename="/home/caaffrey/CLionProjects/Qtree/qtree.h">
+			<Option target="Qtree"/>
+		</Unit>
+		<Unit filename="/home/caaffrey/CLionProjects/Qtree/tmp.c">
 			<Option target="Qtree"/>
 		</Unit>
 		<Unit filename="/home/caaffrey/CLionProjects/Qtree/CMakeLists.txt">

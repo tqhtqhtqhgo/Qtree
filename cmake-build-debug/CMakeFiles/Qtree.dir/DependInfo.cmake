@@ -5,8 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/caaffrey/CLionProjects/Qtree/main.c" "/home/caaffrey/CLionProjects/Qtree/cmake-build-debug/CMakeFiles/Qtree.dir/main.c.o"
+  "/home/caaffrey/CLionProjects/Qtree/tmp.c" "/home/caaffrey/CLionProjects/Qtree/cmake-build-debug/CMakeFiles/Qtree.dir/tmp.c.o"
   )
-set(CMAKE_C_COMPILER_ID "Clang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH

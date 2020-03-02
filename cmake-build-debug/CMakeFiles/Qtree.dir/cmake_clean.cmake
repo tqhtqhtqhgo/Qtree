@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Qtree.dir/main.c.o"
+  "CMakeFiles/Qtree.dir/tmp.c.o"
   "Qtree"
   "Qtree.pdb"
 )
