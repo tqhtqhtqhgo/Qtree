@@ -1,1 +1,0 @@
-/usr/bin/cc  -O0 -g -lm  -g   CMakeFiles/Qtree.dir/tmp.c.o CMakeFiles/Qtree.dir/main.c.o  -o Qtree 
