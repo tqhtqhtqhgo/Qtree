@@ -42,30 +42,25 @@ void makeChildren( Node *parent ) {
 
 }
 
-int preVisitQuadTree(Node* InRoot)
-{
 
-    if (InRoot == NULL || InRoot->child[0] != NULL || InRoot->child[1] != NULL || InRoot->child[2] != NULL || InRoot->child[3] != NULL) {
-        preVisitQuadTree(InRoot->child[0]);
-        preVisitQuadTree(InRoot->child[1]);
-        preVisitQuadTree(InRoot->child[2]);
-        preVisitQuadTree(InRoot->child[3]);
-    }
-    else {
+int growTree(Node* InRoot) {
+
+    if (InRoot == NULL || InRoot->child[0] != NULL || InRoot->child[1] != NULL || InRoot->child[2] != NULL ||
+        InRoot->child[3] != NULL) {
+        growTree(InRoot->child[0]);
+        growTree(InRoot->child[1]);
+        growTree(InRoot->child[2]);
+        growTree(InRoot->child[3]);
+    } else {
         makeChildren(InRoot);
     }
     return 0;
 }
 
-int growTree(Node* InRoot){
-    if(InRoot){
-        preVisitQuadTree(InRoot->child[0]);
-        preVisitQuadTree(InRoot->child[1]);
-        preVisitQuadTree(InRoot->child[2]);
-        preVisitQuadTree(InRoot->child[3]);
-    }
-    else{
-        makeChildren(InRoot);
-    }
-    return 0;
+void removeChild(Node *root){
+    root->child[0]=NULL;
+    root->child[1]=NULL;
+    root->child[2]=NULL;
+    root->child[3]=NULL;
+    free(root);
 }
