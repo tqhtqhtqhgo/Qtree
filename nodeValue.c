@@ -1,4 +1,3 @@
-//#include <evrpc.h>
 #include "math.h"
 #include "nodeValue.h"
 #include "stdlib.h"
@@ -19,7 +18,7 @@ double nodeValue( Node *node, double time ) {
 
 double value( double x, double y, double time ) {
 
-  return( 2.0*exp(-8.0*(x-time)*(x-time)) - 1.0 ) ;
+  return( 2.0*exp(-8.0*(x-time)*(y-time)) - 1.0 ) ;
 }
 
 int nodeFlag(Node *root){

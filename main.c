@@ -11,6 +11,7 @@ int main( int argc, char **argv ) {
     growTree(head);
     growTree(head);
     growTree(head);
+
     generateTree(head);
     //    makeChildren(head);
 //    printf("%i",nodeFlag(head->child[3]));
