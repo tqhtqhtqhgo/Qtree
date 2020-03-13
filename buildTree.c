@@ -58,9 +58,8 @@ int growTree(Node* InRoot) {
 }
 
 void removeChild(Node *root){
-    root->child[0]=NULL;
-    root->child[1]=NULL;
-    root->child[2]=NULL;
-    root->child[3]=NULL;
-    free(root);
+    for (int i = 0; i <4 ; ++i) {
+        free(root->child[i]);
+        root->child[i]=NULL;
+    }
 }

@@ -1,4 +1,5 @@
-#include "writeTree.h"
+#include "nodeValue.h"
+#include "stdio.h"
 // main
 
 int main( int argc, char **argv ) {
@@ -10,6 +11,8 @@ int main( int argc, char **argv ) {
     growTree(head);
     growTree(head);
     makeChildren(head->child[1]->child[1]);
+    double n=nodeValue(head->child[1]->child[1],0);
+    printf("%f",n);
     removeChild(head->child[1]->child[1]);
     writeTree(head);
 
