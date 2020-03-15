@@ -1,8 +1,9 @@
 #include "math.h"
 #include "nodeValue.h"
 #include "stdlib.h"
+#include "stdio.h"
 // Evaluate function at centre of quadtree node
-
+//用的CMAKE linux可以cmake . 再make就行
 double nodeValue( Node *node, double time ) {
 
   int level = node->level;
@@ -64,4 +65,64 @@ int generateTree(Node *node){
          }
     }
     return 0;
+}//This function is used to task3.
+
+int GATree(Node *node, int n,int M, int R){
+    if (node->child[0]==NULL && node->child[1]==NULL && node->child[2]==NULL && node->child[3]==NULL){
+        if (nodeFlag(node)==1 && node->level<n){
+            makeChildren(node);
+            M++;
+        }
+    }
+    else if(node->child[0]!=NULL || node->child[1]!=NULL || node->child[2]!=NULL || node->child[3]!=NULL){
+        if(node->child[0]!=NULL && node->child[1]!=NULL && node->child[2]!=NULL && node->child[3]!=NULL){
+            if(nodeFlag(node->child[0])==-1 && nodeFlag(node->child[1])==-1 && nodeFlag(node->child[2])==-1 && nodeFlag(node->child[3])==-1){
+                removeChild(node);
+                R++;
+            }
+            else{
+                for (int i = 0; i < 4; ++i) {
+                    generateTree(node->child[i]);
+                }
+            }
+        }
+        else{
+            for (int i = 0; i <4 ; ++i) {
+                if (node->child[i]!=NULL){
+                    generateTree(node->child[i]);
+                }
+            }
+        }
+    }
+    return 0;
 }
+
+int adapt(Node *node){
+    if (node->child[0]==NULL && node->child[1]==NULL && node->child[2]==NULL && node->child[3]==NULL){
+        if (nodeFlag(node)==1 && node->level<6){
+            makeChildren(node);
+        }
+    }
+    else if(node->child[0]!=NULL || node->child[1]!=NULL || node->child[2]!=NULL || node->child[3]!=NULL){
+        if(node->child[0]!=NULL && node->child[1]!=NULL && node->child[2]!=NULL && node->child[3]!=NULL){
+            if(nodeFlag(node->child[0])==-1 && nodeFlag(node->child[1])==-1 && nodeFlag(node->child[2])==-1 && nodeFlag(node->child[3])==-1){
+                removeChild(node);
+            }
+            else{
+                for (int i = 0; i < 4; ++i) {
+                    adapt(node->child[i]);
+                }
+            }
+        }
+        else{
+            for (int i = 0; i <4 ; ++i) {
+                if (node->child[i]!=NULL){
+                    adapt(node->child[i]);
+                }
+            }
+        }
+    }
+    return 0;
+}
+
+
